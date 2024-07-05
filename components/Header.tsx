@@ -3,7 +3,7 @@ import Generic from "./Generic.tsx";
 
 export default function Header({ children }: { children: ComponentChildren }) {
 	return (
-		<header class="border-2 flex items-center justify-between shadow-sm rounded-md bg-[#fcfcfc] p-1 px-1">
+		<header class="border-2 flex items-center justify-between shadow-sm rounded-md h-18 bg-[#fcfcfc] p-1 px-1">
 			<div class="flex justify-start gap-2 overflow-hidden">
 				{children}
 			</div>
