@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .base-bg {
+        @apply bg-gradient-to-r from-base-100 via-base-200 to-base-300 
+    }
+    .main {
+        width: calc(100% - 4rem);
+        margin-left: 4rem;
+        
+    }
+    .main-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        margin-top: .4rem;
+        column-gap: .4rem;
+    }
+    .active {
+        @apply border border-base-200 bg-light-100 rounded-2xl shadow-md
+    }
+    .active i {
+        @apply text-base-200
+    }
+    .brand {
+        @apply text-2xl text-slate-500 drop-shadow-md cursor-pointer box-content
+    }
+    .brand-active {
+        @apply drop-shadow-none rounded-md shadow-md text-base-200 p-2
+    }
+    .input {
+        @apply outline-none px-2 py-1 bg-slate-50 text-slate-500 drop-shadow-md border
+    }
+}
+
