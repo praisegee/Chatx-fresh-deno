@@ -1,3 +1,8 @@
 export default function Home() {
-  return <h1>Home</h1>;
+  return (
+    <div class="flex justify-center items-center w-full h-screen">
+      <i class="brand fa-brands fa-phoenix-squadron text-base-200 text-[400px]">
+      </i>
+    </div>
+  );
 }

@@ -16,6 +16,7 @@
         grid-template-columns: 1fr 2fr 1fr;
         margin-top: .4rem;
         column-gap: .4rem;
+        grid-row-start: auto;
     }
     .active {
         @apply border border-base-200 bg-light-100 rounded-2xl shadow-md
@@ -27,10 +28,13 @@
         @apply text-2xl text-slate-500 drop-shadow-md cursor-pointer box-content
     }
     .brand-active {
-        @apply drop-shadow-none rounded-md shadow-md text-base-200 p-2
+        @apply drop-shadow-none rounded-md shadow-md text-base-200 p-2 
     }
     .input {
         @apply outline-none px-2 py-1 bg-slate-50 text-slate-500 drop-shadow-md border
+    }
+    .chat-box {
+        width: calc(100% - 5rem);
     }
 }
 

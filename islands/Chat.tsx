@@ -1,35 +1,52 @@
 export default function Chat() {
-  
   return (
     <div class="p-2 flex flex-col chat">
-      <ChatContent/>
-      <ChatContent/>
-      <ChatContent/>
+      <ChatContent
+        user={{
+          id: 1,
+          name: "Adesanmi Dayo",
+          message:
+            "Hello How are you? Hello How are you? Hello How are you? Hello How are you? Hello How are you? ",
+        }}
+      />
+      <ChatContent
+        user={{ id: 2, name: "John Down", message: "I'm fine how about you?" }}
+      />
+      <ChatContent
+        user={{ id: 1, name: "Adesanmi Dayo", message: "I'm fine also." }}
+      />
     </div>
   );
 }
 
-function ChatContent(){
-  const user = {
-    id: "23",
-    name: "Adesanmi Dayo",
-  };
-
-  return <div class="f-full py-1 px-2 flex justify-stretch items-end gap-2">
-  <img
-    src="images/avater.jpg"
-    class="rounded-full h-10 w-10 shadow-md"
-    alt="Avater"
-  />
-  <div class="p-3 rounded-2xl shadow-md w-full rounded-bl-none border text-dark-100 text-sm">
-    <p class="font-semibold text-sm">{user.name}</p>
-    <p class="text-slate-600 text-sm">
-      My message goes here! Lorem ipsum dolor, sit amet consectetur
-      adipisicing elit. Atque minima accusantium architecto hic, dolor
-      voluptatem aliquam optio placeat itaque voluptatum voluptates amet
-      soluta exercitationem aspernatur doloribus est eius. Accusantium,
-      non.
-    </p>
-  </div>
-</div>
+function ChatContent({ user }: { id: number; name: string }) {
+  const isMe = user.id === 1;
+  return (
+    <div
+      class={`max-w-full py-1 px-3 flex justify-stretch items-end gap-2 ${
+        isMe ? "flex-row-reverse" : ""
+      }`}
+    >
+      <img
+        src="images/avater.jpg"
+        class="rounded-full h-8 w-8 shadow-md"
+        alt="Avater"
+      />
+      <div
+        class={`px-3 pt-2 pb-1 rounded-2xl shadow-md chat-box ${
+          isMe ? "rounded-br-none bg-light-100" : "rounded-bl-none"
+        } border text-dark-100 text-sm`}
+      >
+        <p class={`font-semibold text-sm ${isMe ? "text-base-200" : ""}`}>
+          {user.name} {isMe && <span>(You)</span>}
+        </p>
+        <p class="text-slate-600 text-sm pt-1">
+          {user.message}
+        </p>
+        <p class={`text-right text-xs ${isMe ? "text-base-200" : ""}`}>
+          Monday 10:21pm
+        </p>
+      </div>
+    </div>
+  );
 }

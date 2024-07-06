@@ -2,7 +2,6 @@ import { useState } from "preact/hooks";
 
 const initTickets = [
   { id: 1, name: "simple ticket", active: true },
-  { id: 2, name: "delivery", active: false },
 ];
 
 export default function TicketTab() {

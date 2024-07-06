@@ -3,7 +3,7 @@ import AdsCard from "../islands/AdsCard.tsx";
 
 export default function MessageDetail() {
   return (
-    <aside class="border-2 shadow-sm rounded-md bg-[#fcfcfc] p-1 px-3 min-w-[300px]">
+    <aside class="border-2 shadow-sm rounded-md bg-[#fcfcfc] p-1 px-3 min-w-[300px] hidden sm:block">
       <h2 class="border-b py-2 block">Message Details</h2>
       <div class="border-b py-2 mb-2">
         <MessageForm

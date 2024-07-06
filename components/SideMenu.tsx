@@ -23,7 +23,7 @@ export default function SideMenu() {
 					</i>
 				</li>
 				<li>
-					<i class="brand fa-solid fa-gear text-2xl hover:brand-active">
+					<i class="brand fa-solid fa-gear text-2xl">
 					</i>
 				</li>
 			</ul>
