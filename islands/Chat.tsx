@@ -1,6 +1,6 @@
 export default function Chat() {
   return (
-    <div class="p-2 flex flex-col chat">
+    <div class="p-2 flex flex-col md:chat">
       <ChatContent
         user={{
           id: 1,
